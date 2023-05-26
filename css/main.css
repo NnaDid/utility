@@ -103,3 +103,85 @@ form button:hover{
     background-color: rgba(255, 68, 0, 0.749);
     cursor: pointer;
 }
+
+
+.how__it__works{
+    background-color: #fff;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 40px 50px;
+}
+
+.left__how__it__works{
+    width:70%;
+    height: 450px;
+    padding-top: 20px;
+}
+
+.right__how__it__works{
+    height: 450px;
+    padding-top: 20px;
+}
+
+.right__how__it__works img{
+    width: 100%; 
+}
+
+.service__options p{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.service__options{
+    padding-top: 20px;
+}
+.left__how__it__works h2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-weight: 900;
+    font-size: 48px;
+}
+
+.our__features{
+    background-color: #fff;
+    padding: 40px 50px;
+    border-top: 2px solid #eee;
+
+}
+
+.inner__features{
+    display: flex;
+}
+
+
+.column{
+    width: 50%;
+}
+
+.feature__row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 80px;
+    margin:10px 0 10px 0;
+}
+
+.feature__row .icon_holder{
+    margin-right: 10px;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    background-color: orangered;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff !important;
+}
+
+.feature__row .content{
+    height: 80px;
+}
+
+
