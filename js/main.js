@@ -1,3 +1,4 @@
+"use strict";
 const select__utility = document.getElementById("select__utility");
 const variant         = document.getElementById("variant");
 
@@ -43,3 +44,60 @@ select__utility.addEventListener("change", function(evt){
     variant.innerHTML = variant_option; 
    
 });
+
+
+
+// document.querySelectorAll('nav--bar').addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const target = e.target;
+//     if (target.classList.contains('link--a')) {
+//         const id = target.getAttribute('href').slice(1);
+//         document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+//     }
+// });
+
+document.querySelectorAll('div.links a').forEach((a)=>{
+    a.addEventListener("click", function(e){
+         e.preventDefault();
+         const link = e.target; 
+         // remove all active classes
+         removeActiveClass( document.querySelectorAll('div.links a') ); 
+         //then add the acitve class to the current tab
+         link.classList.add('active');
+
+         if(link.classList.contains("link-a")){
+            const id = link.getAttribute('href').split("#")[1];
+            if(id !== undefined){
+                document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+            }
+            console.log(id);
+         }
+    });
+});
+
+// this function removes all the active classes from the a element(s)
+function removeActiveClass(list){
+     for(let x of list){
+        if(x.classList.contains("active")){
+            x.classList.remove("active");
+        }
+     }
+}
+
+
+
+
+// the bottom button
+let bottom_btn = document.querySelector(".up__arrow");
+bottom_btn.addEventListener("click",function(e){
+    console.log(this);
+     let color = Math.floor( Math.random() * 1000 );
+    //  console.log(color);
+    document.body.style.background ="#"+color;
+});
+
+var amira = 0;
+const amia = 10;
+
+console.log(window);
+console.log(this);
